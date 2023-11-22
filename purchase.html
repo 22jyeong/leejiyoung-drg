@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22jyeong_dr.g</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="purchase.css">
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="footer.mb.js"></script>
+    <!-- 인클루드 -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+
+<body>
+
+    <!-- header -->
+    <div w3-include-html="header.html"></div>
+    <!-- header -->
+
+
+    <div class="cart-pc">
+        <article class="cart">
+            <div>
+                <div class="top-section">
+                    <img id="imageContainer" src="images/cosmetic/red_1.jpg">
+                </div>
+
+                <div class="thumb">
+                    <img onclick="change_img(this)" src="images/cosmetic/red_1.jpg">
+                    <img onclick="change_img(this)" src="images/cosmetic/red_2.jpg">
+                    <img onclick="change_img(this)" src="images/cosmetic/red_3.jpg">
+                    <img onclick="change_img(this)" src="images/cosmetic/red_4.jpg">
+                </div>
+            </div>
+        </article>
+
+        <article class="red">
+
+            <div>
+                <h4>레드 블레미쉬 클리어 수딩 크림 50ml 듀오 선물 세트</h4>
+                <h5>[진정한 우리 사이 기프트 세트] 진정 강한 수분 크림
+                </h5>
+            </div>
+
+            <div>
+                <div>
+                    <a>#진정강한</a>
+                    <a>#수분크림</a>
+                </div>
+            </div>
+
+            <div>
+                <img src="images/purchase/star.svg"></img>
+                <div class="hot-goods-love">
+                    <img src="images/icon/icon_heart.png">
+                    <img src="images/icon/red_heart.png">
+                </div>
+            </div>
+
+
+            <div>
+                <div>
+                    <p>판매가</p>
+                    <span>62,000원</span>
+                </div>
+
+                <div>
+                    <p>할인가</p>
+                    <div>
+                        <span>31,000원</span>
+                        <span>50%</span>
+                    </div>
+                </div>
+
+                <div>
+                    <p>제조일자</p>
+                    <span>2023-09-19</span>
+                </div>
+
+                <div class="num">
+                    <p>수량</p>
+                    <div>
+                        <span class="count">
+                            <a class="minus">-</a>
+                            <span id="result">1</span>
+                            <a class="plus">+</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <p>총 구매금액</p>
+                    <span class="totalcost">31000원</span>
+                </div>
+
+                <div>
+                    <button>구매하기</button>
+                    <button>장바구니</button>
+                </div>
+            </div>
+
+        </article>
+    </div>
+
+
+    <!-- 메인 제품 섹션 -->
+
+    <script>
+        let container = document.getElementById("imageContainer");
+        // img 자신 즉, 디스로 아규먼츠 설정하고 파라미터 image에 값을 넘김 
+        function change_img(image) {
+            // 디스의 src 값을 container에 넘김. 
+            container.src = image.src;
+        }
+
+        // <!-- 좋아요 -->
+
+        window.addEventListener("load", function () {
+            const lovebtn = document.querySelectorAll(".hot-goods-love");
+
+            for (let i = 0; i < lovebtn.length; i++) {
+                lovebtn[i].addEventListener("click", function () {
+                    lovebtn[i].classList.toggle("active");
+                });
+            }
+        });
+    </script>
+
+
+    <article class="cream">
+
+        <section>
+            <h4><span>진정</span> 강한<br>
+                <span>수분</span> 크림
+            </h4>
+            <img
+                src="images/purchase/purchase_cream_1.jpg">
+            <div></div>
+            <p>닥터지 레드 블레미쉬 클리어 수딩 크림 50ml</p>
+            </div>
+        </section>
+    </article>
+
+    <div class="cream-bg">
+        <section>
+            <h4><span>2천만</span> 국민의<br>
+                <span>진정</span> <span>수분</span> 크림
+            </h4>
+
+            <div data-aos="fade-up">
+                <h4><a id="counter1">20000000</a>개 돌파</h4>
+            </div>
+            <img
+                src="images/purchase/purchase_cream_2.jpg">
+        </section>
+
+    </div>
+
+    <!-- 2천만 숫자 카운팅 -->
+    <script>
+        function numberCounter(target_frame, target_number) {
+            this.count = 0; this.diff = 0;
+            this.target_count = parseInt(target_number);
+            this.target_frame = document.getElementById(target_frame);
+            this.timer = null;
+            this.counter();
+        };
+        numberCounter.prototype.counter = function () {
+            var self = this;
+            this.diff = this.target_count - this.count;
+
+            if (this.diff > 0) {
+                self.count += Math.ceil(this.diff / 5);
+            }
+
+            this.target_frame.innerHTML = this.count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+            if (this.count < this.target_count) {
+                this.timer = setTimeout(function () { self.counter(); }, 100);
+            } else {
+                clearTimeout(this.timer);
+            }
+        };
+
+        new numberCounter("counter1", 20000000);
+        
+    </script>
+
+    <article class="cica">
+
+        <div data-aos="fade-up">
+            <div>
+                <h4>10가지 시카 성분으로 더 강해진</h4>
+                <h4>민감 피부 <span>진정</span></h4>
+            </div>
+
+            <p>더 강해진 <span>10-CICA COMPLEX</span>와<br>
+                특허 공법으로 추출된 <span>에코 시카</span> 성분이<br>
+                <span>자극 받은 피부에 강한 진정 효과를 선사해요.</span>
+            </p>
+        </div>
+
+        <img src="images/purchase/purchase_cream_3.jpg">
+
+        <div data-aos="fade-up">
+            <p><span>레드</span> 블레미쉬 클리어 수딩 크림으로</p>
+
+            <h4>일상 속 자극에 지친 피부에</h4>
+            <h4><span>진정</span>을 선물해 보세요</h4>
+        </div>
+
+    </article>
+
+    <article class="cica-pc">
+
+        <img src="images/purchase/purchase_cream_3.jpg">
+
+        <div>
+            <div data-aos="fade-left">
+                <div>
+                    <h4>10가지 시카 성분으로 더 강해진</h4>
+                    <h4>민감 피부 <span>진정</span></h4>
+                </div>
+
+                <p>더 강해진 <span>10-CICA COMPLEX</span>와<br>
+                    특허 공법으로 추출된 <span>에코 시카</span> 성분이<br>
+                    <span>자극 받은 피부에 강한 진정 효과를 선사해요.</span>
+                </p>
+            </div>
+
+            <div data-aos="fade-left">
+                <p><span>레드</span> 블레미쉬 클리어 수딩 크림으로</p>
+
+                <h4>일상 속 자극에 지친 피부에</h4>
+                <h4><span>진정</span>을 선물해 보세요</h4>
+            </div>
+        </div>
+
+    </article>
+
+    <article class="skin">
+        <img src="images/purchase/purchase_cream_4.gif">
+
+        <div>
+            <h4>끈적임 없는 부드러운 발림성으로</h4>
+            <h4><span>피부에 편안하게 흡수돼요.</span></h4>
+        </div>
+    </article>
+
+    <article class="ehco">
+        <h1>닥터지는 클린뷰티를 <br>
+            실천합니다</h1>
+        <img src="images/purchase/purchase_cream_5.gif">
+        <h4><span>환경</span>에는 이롭고, <span>분리배출</span>은 쉬운 <br>
+            <span>친환경 패키지</span>로 포장돼요.
+        </h4>
+    </article>
+
+    <article class="promise">
+        <h1>Dr.G Promise</h1>
+
+        <div data-aos="fade-up" data-aos-duration="1000">
+            <section>
+                <div>
+                    <div>
+                        <img
+                            src="images/icon/purchase_icon_1.png">
+                    </div>
+                    <div>
+                        <h5>01 피부 과학 실현</h5>
+                        <p>파부 전문가들의 기술력으로 <br>
+                            피부 고민을 안전하게 케어할 수 있도록 노력합니다.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div>
+                    <div>
+                        <img src="images/icon/purchase_icon_2.png">
+                    </div>
+                    <div>
+                        <h5>02 피부 자극 / 민감성 테스트 완료</h5>
+                        <p>닥터지의 모든 제품은 순하게 <br>
+                            피부에 꼭 필요한 것만 전합니다.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div>
+                    <div>
+                        <img
+                            src="images/icon/purchase_icon_3.png">
+                    </div>
+                    <div>
+                        <h5>03 건강한 피부 습관 각.보.자</h5>
+                        <p>피부 건강을 위한 지속 가능한 피부 습관으로
+                            각질-보습-자외선 케어를 제안하며
+                            이에 기반한 스킨케어를 연구합니다.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </article>
+
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- footer -->
+    <div w3-include-html="footer.html"></div>
+    <!-- footer -->
+
+    <!-- footer.mb -->
+    <div w3-include-html="footer.mb.html"></div>
+    <!-- footer.mb -->
+
+</body>
+
+<script>
+    includeHTML();
+</script>
+
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22jyeong_dr.g</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="posting.css">
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="footer.mb.js"></script>
+    <!-- 인클루드 -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+
+<body>
+
+    <!-- header -->
+    <div w3-include-html="header.html"></div>
+    <!-- header -->
+
+    <div class="news-list-wrap">
+        <h3>NEWS</h3>
+
+        <article class="news-list list">
+
+            <div>
+                <p>총 <span class="text-red">66</span> 건</p>
+                <div>
+                    <select>
+                        <option value="">전체</option>
+                        <option value="">제목</option>
+                        <option value="">내용</option>
+                    </select>
+                    <div>
+                        <input type="text" placeholder="검색어를 입력하세요.">
+                        <img
+                            src="images/icon/news_icon_search.png">
+                    </div>
+                </div>
+            </div>
+            <section>
+                <div>
+                    <img src="images/news/news_list_1.jpg">
+                    <div>+</div>
+                </div>
+                <div>
+                    <h3>NEW 광채 앰플 론칭 이벤트</h3>
+                    <p>광나는 피부 조명 ON 투명 광채 앰플 론칭!<br>
+                        백옥 주사 주성분 글루타치온 리포좀 캡슐 함유</p>
+                    <small>23.11.30</small>
+                </div>
+            </section>
+            <section>
+                <div>
+                    <img
+                        src="images/news/news_list_2.jpg">
+                    <div>+</div>
+                </div>
+                <div>
+                    <h3>블랙 스네일 콜라겐 미스트 출시 기념 특가</h3>
+                    <p>
+                        <뿌리는 콜라겐> 블랙 스네일 미스트, 세럼 출시
+                            보습, 탄력 만족도 100% 광채 탄력 미스트
+                    </p>
+                    <small>23.11.16</small>
+                </div>
+            </section>
+            <section>
+                <div>
+                    <img
+                        src="images/news/news_list_3.jpg">
+                    <div>+</div>
+                </div>
+                <div>
+                    <h3>
+                        블랙 스네일 콜라겐 투 미스트 세럼 뷰티테스터 모집</h3>
+                    <p>속당김 잡는 뿌리는 콜라겐 블랙 스네일 콜라겐 투 미스트 세럼
+                        뷰티테스터 모집
+                    </p>
+                    <small>23.11.16</small>
+                </div>
+            </section>
+            <section>
+                <div>
+                    <img src="images/news/news_list_4.png">
+                    <div>+</div>
+                </div>
+                <div>
+                    <h3>무료 샘플 신청</h3>
+                    <p>월 1회 피부 고민에 따른 각보자 무료 샘플을 신청해보세요</p>
+                    <small>23.11.01</small>
+                </div>
+            </section>
+
+            <div class="page">
+                <p class="checkpage">1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+                <p>5</p>
+            </div>
+        </article>
+
+    </div>
+
+    <!-- footer -->
+    <div w3-include-html="footer.html"></div>
+    <!-- footer -->
+
+    <!-- footer -->
+    <div w3-include-html="footer.mb.html"></div>
+    <!-- footer -->
+
+    <script>
+        // News 페이지 넘버
+        window.addEventListener("load", function () {
+            const tagList = document.querySelectorAll(".page > p");
+            for (let i = 0; i < tagList.length; i++) {
+                tagList[i].addEventListener("click", function () {
+                    clearPage();
+                    this.classList.add("checkpage");
+                });
+            }
+
+            function clearPage() {
+
+                for (let i = 0; i < tagList.length; i++) {
+                    tagList[i].classList.remove("checkpage");
+                }
+            }
+        });
+    </script>
+
+</body>
+
+<script>
+    includeHTML();
+</script>
+
+<script type="text/javascript" src="script.js"></script>
+
+</html>

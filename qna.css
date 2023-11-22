@@ -1,0 +1,320 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0px solid silver;
+}
+
+img {
+    width: 100px;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    line-height: 1rem;
+    color: #252525;
+    letter-spacing: 0.1px;
+}
+
+h1 {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 35px;
+    line-height: 2.2rem;
+    color: #222;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 1.5rem;
+    color: #000;
+    text-align: center;
+    word-break: keep-all;
+}
+
+h3 {
+    font-size: 20px;
+    line-height: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+h4 {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+}
+
+h5 {
+    font-size: 0.7rem;
+    line-height: 0.7rem;
+}
+
+strong {
+    font-size: 23px;
+    font-weight: 300;
+    line-height: 2.5rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    word-break: keep-all;
+}
+
+small {
+    font-size: smaller;
+    color: #999;
+}
+
+a:link {
+    color: #252525;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #252525;
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    font-family: 'Noto Sans Kr', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    background: transparent;
+    transition: 0.5s;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn-eee {
+    background: #eee;
+    color: #333;
+}
+
+.btn-eee:hover {
+    background: #ccc;
+    color: #333;
+}
+
+.btn-brown {
+    background-color: #4f342a;
+    color: #fff;
+}
+
+.btn-brown:hover {
+    background-color: rgb(97, 36, 12);
+}
+
+.btn-fff {
+    color: #000;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.btn-fff:hover {
+    border: 1px solid #000;
+    background-color: #fff;
+}
+
+article {
+    width: 90%;
+    max-width: 1000px;
+    border: 1px solid #eee;
+    padding: 60px 30px 70px 30px;
+    margin: 0 auto;
+    margin-bottom: 120px;
+}
+
+input[type="text"] {
+    width: 100%;
+    height: 50px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    margin-bottom: 24px;
+    padding-left: 12px;
+    border-bottom: 1px solid #ddd;
+    outline: none;
+}
+
+textarea {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    width: 100%;
+    height: 300px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 12px;
+    resize: none;
+}
+
+textarea:focus {
+    outline: 1px solid black;
+}
+
+select {
+    width: 100%;
+    height: 50px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    border: 1px solid #ddd;
+    padding-left: 2vmin;
+    margin-bottom: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url('images/logo/qna_icon_under.png') no-repeat 97% 50%/10px auto;
+}
+
+select:focus {
+    outline: 1px solid black;
+}
+
+
+.qna-to {
+    margin-top: 50px;
+}
+
+.qna-to h3 {
+    margin-bottom: 40px;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    font-size: 1.8rem;
+    padding: 40px 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.qna-to>div:nth-child(2) {
+    font-size: 19px;
+    line-height: 1.5rem;
+    padding: 20px 0;
+    border-bottom: 1px solid #666;
+    margin-bottom: 40px;
+}
+
+.text-red {
+    color: #2fcab0;
+    font-weight: 700;
+}
+
+.qna-contact h3 {
+    margin-bottom: 40px;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    font-size: 1.8rem;
+    padding: 40px 0;
+}
+
+.qna-to details[open] img {
+    transform: rotate(180deg);
+}
+
+.qna-to details>summary {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.qna-to details>summary img {
+    width: 10px;
+    margin-left: 10px;
+}
+
+.qna-to details>summary>div {
+    display: flex;
+    align-items: center;
+}
+
+.qna-to details>summary>div:nth-child(2)>div:nth-child(1) {
+    display: none;
+}
+
+.qna-to details>summary>div:nth-child(1)>div:nth-child(1) {
+    width: 80px;
+    min-width: 57px;
+    text-align: center;
+    font-size: 0.8rem;
+    background: #2fcab0;
+    color: #fff;
+    padding: 4px;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.to-wait>summary>div:nth-child(1)>div:nth-child(1) {
+    background: #666 !important;
+}
+
+.to-wait>div:nth-child(3)>div {
+    display: none;
+}
+
+.to-wait>div:nth-child(3)>p {
+    color: #666;
+}
+
+.qna-to details>summary>div:nth-child(2)>div:nth-child(1) {
+    color: #888;
+}
+
+.qna-to details>div {
+    padding: 40px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #eee;
+    line-height: 1.4rem;
+}
+
+.qna-to details>div>div {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 1366px) {
+    article {
+        padding: 60px 100px;
+    }
+
+    .list section {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .list section div:nth-child(1) {
+        width: 400px;
+    }
+
+    .list section div:nth-child(2) {
+        width: 46%;
+    }
+
+    .qna-to details>summary>div:nth-child(2)>div:nth-child(1) {
+        display: block;
+    }
+
+    .news-list div:nth-child(1) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .news-list div:nth-child(1)>div:nth-child(2) div {
+        width: 270px;
+    }
+
+    .news-list div:nth-child(1)>div:nth-child(2) select {
+        width: 100px;
+    }
+}
